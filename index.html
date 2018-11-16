@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ICX paper wallet generator</title>
+	<script type="text/javascript">
+		function generateNewIcxWallet(){
+			var privateKey = random256BytesHex();
+			document.getElementById('response').innerHTML =  '<p>Private Key: '+privateKey+'</p>'+'<p>Public Key: '+getIcxPublicKey(privateKey)+'</p>';
+		}
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<style>
+	body {
+		background-color: white;
+		font-family: 'Open Sans', sans-serif;
+		color:#111111;
+	}
+
+		
+		h1.maincaption{
+			text-align: left;
+			color:#101011
+		}
+	
+	#main{
+		margin: 50px auto;
+		padding:50px;
+		width: 800px;
+		background: white;
+		text-align: center;
+		-webkit-box-shadow: -1px 12px 26px -14px rgba(0,0,0,0.8);
+		-moz-box-shadow: -1px 12px 26px -14px rgba(0,0,0,0.8);
+		box-shadow: -1px 12px 26px -14px rgba(0,0,0,0.8);
+	}
+	#instructions
+	{
+		margin-top:40px;
+		border:1px solid #1d9aad;
+		background:#b7d5da;
+		padding:15px;
+		border-radius:10px;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+	}
+		
+	#instructions h2
+	{
+		text-align: left;
+		color: #1d9aad;
+		font-weight: 400;
+		margin: 0;
+		padding: 0;
+		padding-left: 5px;
+	}
+	#instructions ol{
+		margin:0;
+		padding-left: 25px;
+	}
+	#instructions ol li{
+		margin:10px 0px;
+		padding: 0;
+		text-align: left;
+		color:#1d9aad;
+		
+	}
+	#workArea{
+		margin:45px 0;
+	}
+		footer {
+			text-align: center;
+			font-size: 14px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<section id="main">
+		
+		<h1 class="maincaption">ICON paper (offline) wallet generator</h1>
+		
+		<section id="instructions">
+			<h2>Instructions</h2>
+			<ol>
+				<li>Temporarily switch off connection to the internet. (HIGHLY RECOMMENDED)</li>
+				<li>Click on Generate!</li>
+			</ol>
+			
+		</section>
+		<section id="workArea">
+			<div id="response"></div>
+			<button onClick="generateNewIcxWallet()">Generate!</button>
+		</section>
+		<script src="bundle.js"></script>
+	</section>
+	<footer><p>ICX paper (offline) wallet generator (Version 1.0)</p>
+		<p>Buy me a coffee! hxf64c8784308579c19eb1b22fc8767d56960f91c8</p></footer>
+</body>
+</html>
