@@ -1,1 +1,1 @@
-A simple to use ICX paper wallet address generator.
+An easy to use ICX paper wallet address generator.
